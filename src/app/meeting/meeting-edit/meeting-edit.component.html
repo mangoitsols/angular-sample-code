@@ -1,0 +1,41 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header" i18n>Edit Meeting</h5>
+		<div class="card-body">
+			<form [formGroup]="mettingrForm" (ngSubmit)="onSubmit()">
+				<input type="hidden" class="form-control" formControlName="id" [(ngModel)]="meeting.id"  />
+				<div class="form-group col-5">
+					<label i18n>Full Name</label>
+					<input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" [(ngModel)]="meeting.name" />
+					<div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+						<div *ngIf="f.name.errors.required" i18n>Full Name is required</div>
+					</div>
+				</div>
+				<div class="form-group col-5">
+					<label i18n>Meeting Date</label>
+					<input type="date" formControlName="meetingDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.meetingDate.errors }" [(ngModel)]="meeting.meetingDate"  />
+					<div *ngIf="submitted && f.meetingDate.errors" class="invalid-feedback">
+						<div *ngIf="f.meetingDate.errors.required" i18n>Meeting Date is required</div>
+					</div>
+				</div>
+				<div class="form-group col-5">
+					<label i18n>Meeting Start Time</label>
+					<input type="time" mdbInput formControlName="meetingStartTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.meetingStartTime.errors }" [(ngModel)]="meeting.meetingStartTime" />
+					<div *ngIf="submitted && f.meetingStartTime.errors" class="invalid-feedback">
+						<div *ngIf="f.meetingStartTime.errors.required" i18n>Meeting Start Time is required</div>
+					</div>
+				</div>
+				<div class="form-group col-5">
+					<label i18n>Meeting End Time</label>
+					<input type="time" mdbInput formControlName="meetingEndTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.meetingEndTime.errors }" [(ngModel)]="meeting.meetingEndTime" />
+					<div *ngIf="submitted && f.meetingEndTime.errors" class="invalid-feedback">
+						<div *ngIf="f.meetingEndTime.errors.required" i18n>Meeting End Time is required</div>
+					</div>
+				</div>
+				<div class="text-center col-5">
+					<button class="btn btn-primary mr-1" i18n>Save</button>
+					<button class="btn btn-secondary" type="reset" (click)="onReset()" i18n>Reset</button>
+				</div>
+		</form>
+	</div>
+</div>

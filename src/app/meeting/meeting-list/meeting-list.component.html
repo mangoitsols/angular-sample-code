@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="container">
+		<div class="row" style="margin-top:20px;margin-bottom:20px;">			
+			<div class="col-sm-2">
+				<label><strong i18n>Select TimeZone</strong></label>
+			</div>
+			<div class="col-sm-8">				
+				<select name="timeZone1" id="timeZone" [ngModel]="selectedTz" (ngModelChange)="timeZoneChanged($event)">
+					<option *ngFor="let tz of tzNames" [value]="tz">
+					{{ tz }}
+					</option>
+				</select>
+			</div>
+			<div class="col-sm-2">
+				<a class="btn btn-success btn-sm" routerLink='/meeting-create'> <i class="fa fa-plus"></i> <span i18n>Add New Meeting</span></a>
+			</div>
+		</div>
+	</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col" i18n>#</th>
+				<th scope="col" i18n>Name</th>
+				<th scope="col" i18n>Meeting Date</th>
+				<th scope="col" i18n>Start Time</th>
+				<th scope="col" i18n>End Time</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let meeting of meetings; index as i">
+				<th scope="row">{{ i + 1 }}</th>
+				<td>{{meeting.name}}</td>
+				<td>{{meeting.meetingDate}}</td>
+				<td>{{meeting.meetingStartTime}}</td>
+				<td>{{meeting.meetingEndTime}}</td>
+				<th scope="row"><a [routerLink]="['/meeting-edit', meeting.id]" class="btn btn-primary"><span i18n>Edit</span></a>&nbsp;&nbsp;
+				<button (click)="deleteMeeting(meeting.id)" class="btn btn-danger"><span i18n>Delete</span></button></th>
+			</tr>
+		</tbody>
+	</table>
+</div>
