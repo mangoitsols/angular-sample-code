@@ -2,9 +2,10 @@
 	<nav class="navbar navbar-dark bg-dark">
 		<a class="navbar-brand mybrand" routerLink='/meeting-list'> <i class="fa fa-group"></i></a>
 		<h1 class="navbar-brand align-middle" i18n>Meeting Schedule</h1>		
-		<select name="selectLanguage">
-			<option value="English">English</option>
-			<option value="Hindi">Hindi</option>
+		<select name="selectLanguage" [ngModel]="selectedLang" (ngModelChange)="languageChanged($event)">
+			<option *ngFor="let language of languageList" [value]="language.code">
+				{{ language.label }}
+			</option>
 		</select>
 	</nav>
 	<router-outlet></router-outlet>

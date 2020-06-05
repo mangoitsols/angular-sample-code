@@ -58,6 +58,20 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "en": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "hi": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.hi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -69,6 +83,12 @@
           "configurations": {
             "production": {
               "browserTarget": "angularDemo:build:production"
+            },
+            "en": {
+              "browserTarget": "angularDemo:build:en"
+            },
+            "hi": {
+              "browserTarget": "angularDemo:build:hi"
             }
           }
         },

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="e1a39f0834569f3e0482e1d4f7052dfc70a51aad" datatype="html">
+        <source>Meeting Schedule</source>
+        <target>Meeting Schedule</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ca7a0797094fbe71b77d866370aea32a3c78250" datatype="html">
+        <source>Select TimeZone</source>
+        <target>Select TimeZone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f16f66b581b04f30718febfc7782e02d1b0241e2" datatype="html">
+        <source>Add New Meeting</source>
+        <target>Add New Meeting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ddd111adc65ea7a206f01264da2c8a94adfef52" datatype="html">
+        <source>#</source>
+        <target>#</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="55328a7e6a1d692d115b8653687ad0baa4e5d58c" datatype="html">
+        <source>Meeting Date</source>
+        <target>Meeting Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7c0a71d337783e527c1c8e91e433b301c5b1d8a8" datatype="html">
+        <source>Start Time</source>
+        <target>Start Time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e1f10d9bf4d3c37490cd5bf82007444ae7af46b1" datatype="html">
+        <source>End Time</source>
+        <target>End Time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source>
+        <target>Edit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <target>Delete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="825cfd59d0f7311b56cb12bba38163d2a0e22b31" datatype="html">
+        <source>No meeting founds</source>
+        <target>No meeting founds</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-list/meeting-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="50556b1a16b17e963dd5c03f38d72cc75ed683e8" datatype="html">
+        <source>Create New Meeting</source>
+        <target>Create New Meeting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="484b0e541230d60ddb5fbd771a34a5c8d90e7a57" datatype="html">
+        <source>Full Name</source>
+        <target>Full Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="293a7878dc32e0e3936a977c540b93161cb5db9c" datatype="html">
+        <source>Full Name is required</source>
+        <target>Full Name is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ffe491fc1fd02fe52c1da041e2db0e2123b8254" datatype="html">
+        <source>Meeting Date is required</source>
+        <target>Meeting Date is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92a9bfe3fb0893d533a413a69951f56df37d6ef4" datatype="html">
+        <source>Meeting Start Time</source>
+        <target>Meeting Start Time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ed78a043a9893d7e88fcf8cfa0a39bbf0f75eb0" datatype="html">
+        <source>Meeting Start Time is required</source>
+        <target>Meeting Start Time is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0a80cab3ca8cbf567f1f51d727a1f82dfc900ee4" datatype="html">
+        <source>Meeting End Time</source>
+        <target>Meeting End Time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5992bef46428429bb20fa904c8b297e6c53b35a9" datatype="html">
+        <source>Meeting End Time is required</source>
+        <target>Meeting End Time is required</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <target>Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="06c663bf1474713f57551123a46b34318543b67d" datatype="html">
+        <source>Reset</source>
+        <target>Reset</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-create/meeting-create.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0264ff091cf180753c78ad1a72a35f845ec01c8b" datatype="html">
+        <source>Edit Meeting</source>
+        <target>Edit Meeting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/meeting/meeting-edit/meeting-edit.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

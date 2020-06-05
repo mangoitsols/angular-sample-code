@@ -27,7 +27,7 @@
 				<th scope="col"></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody>	
 			<tr *ngFor="let meeting of meetings; index as i">
 				<th scope="row">{{ i + 1 }}</th>
 				<td>{{meeting.name}}</td>
@@ -37,6 +37,7 @@
 				<th scope="row"><a [routerLink]="['/meeting-edit', meeting.id]" class="btn btn-primary"><span i18n>Edit</span></a>&nbsp;&nbsp;
 				<button (click)="deleteMeeting(meeting.id)" class="btn btn-danger"><span i18n>Delete</span></button></th>
 			</tr>
+			<p *ngIf="meetings.length == 0" i18n>No meeting founds</p>
 		</tbody>
 	</table>
 </div>

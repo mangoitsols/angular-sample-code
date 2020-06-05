@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { MeetingService } from '../meeting.service';
 import * as moment from 'moment-timezone';
 import { Moment } from 'moment';
@@ -14,7 +14,8 @@ export class MeetingListComponent implements OnInit {
 	public selectedTz: string;
 	public displayTz: string;
 	meetings;
-	constructor(private meetingService: MeetingService) { 
+
+	constructor(private meetingService: MeetingService, @Inject(LOCALE_ID) protected localeId: string) { 
 		this.tzNames = moment.tz.names();
 		if(localStorage.getItem('setTimeZone') === null || localStorage.getItem('setTimeZone') == undefined) {
 			this.timeZoneChanged('Asia/Kolkata');
@@ -23,6 +24,11 @@ export class MeetingListComponent implements OnInit {
 		}		
 	}
 	
+	/**
+	 * @name ngOnInit
+	 * @desc Get meeting list 
+	 */
+
 	ngOnInit(): void {
 		this.meetings = this.meetingService.getMeetings();
 		var timeZone = $("#timeZone").val();
@@ -40,6 +46,10 @@ export class MeetingListComponent implements OnInit {
 		}.bind(this));
 	}
 
+	/**
+	 * @name deleteMeeting
+	 * @desc Delete meeting by id
+	 */
 	deleteMeeting(id) {
 		if(confirm("Are you sure to delete this")) {
 			for(let i = 0; i < this.meetings.length; i++) {
@@ -51,6 +61,10 @@ export class MeetingListComponent implements OnInit {
 		}
 	}
 
+	/**
+	 * @name timeZoneChanged
+	 * @desc Set timezone in local storage
+	 */
 	public timeZoneChanged(timeZone: string): void {
 		this.selectedTz = timeZone;
 		localStorage.setItem('setTimeZone', timeZone);

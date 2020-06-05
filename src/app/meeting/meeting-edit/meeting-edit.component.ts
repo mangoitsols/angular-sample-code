@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, LOCALE_ID, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MeetingService } from '../meeting.service';
@@ -15,7 +15,12 @@ export class MeetingEditComponent implements OnInit {
     submitted = false;
 	meeting;
 	id;
-	constructor(private formBuilder: FormBuilder,private _Activatedroute:ActivatedRoute,private meetingService: MeetingService,private router:Router) { }
+	constructor(private formBuilder: FormBuilder,private _Activatedroute:ActivatedRoute,private meetingService: MeetingService,private router:Router, @Inject(LOCALE_ID) protected localeId: string) { }
+
+	/**
+	 * @name ngOnInit
+	 * @desc Set form validation 
+	 */
 
 	ngOnInit(): void {
 		this.mettingrForm = this.formBuilder.group({
@@ -42,6 +47,11 @@ export class MeetingEditComponent implements OnInit {
 
 	get f() { return this.mettingrForm.controls; }
 
+	/**
+	 * @name onSubmit
+	 * @desc Check validation and inter meeting in local storage
+	 */
+
 	onSubmit() {
 		this.submitted = true;
 		// stop here if form is invalid
@@ -63,12 +73,16 @@ export class MeetingEditComponent implements OnInit {
 				meetingStart: mstart.getTime(),
 			 	meetingEnd: mend.getTime(),
 			}
-
 			this.meetingService.updateEmployee(this.meeting,newMeeting);
 			this.router.navigate(['meeting-list']);
 		}				
 	}
 
+	/**
+	 * @name onReset
+	 * @desc Reset form value
+	 */
+	 
 	onReset() {
 		this.submitted = false;
 		this.mettingrForm.reset();

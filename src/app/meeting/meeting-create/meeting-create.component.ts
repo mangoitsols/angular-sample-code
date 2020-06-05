@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MeetingService } from '../meeting.service';
 import { Router } from '@angular/router';
@@ -14,7 +14,12 @@ export class MeetingCreateComponent implements OnInit {
 	mettingrForm: FormGroup;
     submitted = false;
     meeting;
-	constructor(private formBuilder: FormBuilder,private meetingService: MeetingService, private router: Router) { }
+	constructor(private formBuilder: FormBuilder,private meetingService: MeetingService, private router: Router, @Inject(LOCALE_ID) protected localeId: string) { }
+
+	/**
+	 * @name ngOnInit
+	 * @desc Set form validation 
+	 */
 
 	ngOnInit(): void {
 		this.mettingrForm = this.formBuilder.group({
@@ -23,16 +28,15 @@ export class MeetingCreateComponent implements OnInit {
 			meetingStartTime: ['', Validators.required],
 			meetingEndTime: ['', Validators.required],
 		});
-
 		this.meeting = this.meetingService.getMeetings();
-		this.meeting.forEach(function (value) {
-			//($t1 <= $v1 && $v1 <= $t2) || ($t1 <= $v2 && $v2 <= $t2) || ($v2 >= $t1  && $v2 >= $t2)
-		    console.log(value.meetingDate+"===="+value.meetingStartTime+"======"+value.meetingEndTime);
-		});
-		console.log(this.meeting);
 	}
 
 	get f() { return this.mettingrForm.controls; }
+
+	/**
+	 * @name onSubmit
+	 * @desc Check validation and inter meeting in local storage
+	 */
 
 	onSubmit() {
 		this.submitted = true;
@@ -59,6 +63,10 @@ export class MeetingCreateComponent implements OnInit {
 		this.router.navigate(['meeting-list']);		
 	}
 
+	/**
+	 * @name onReset
+	 * @desc Reset form value
+	 */
 	onReset() {
 		this.submitted = false;
 		this.mettingrForm.reset();
