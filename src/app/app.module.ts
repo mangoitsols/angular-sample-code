@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { MeetingListComponent } from './meeting/meeting-list/meeting-list.component';
 import { MeetingCreateComponent } from './meeting/meeting-create/meeting-create.component';
 import { MeetingEditComponent } from './meeting/meeting-edit/meeting-edit.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { DeviceDetectorModule } from 'ngx-device-detector';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { MeetingEditComponent } from './meeting/meeting-edit/meeting-edit.compon
     MeetingEditComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
+    NgbModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaterialTimepickerModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

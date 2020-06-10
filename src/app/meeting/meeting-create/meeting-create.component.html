@@ -2,7 +2,7 @@
 <div class="card m-3">
 	<h5 class="card-header" i18n>Create New Meeting</h5>
 		<div class="card-body">
-			<form [formGroup]="mettingrForm" (ngSubmit)="onSubmit()">
+			<form [formGroup]="mettingrForm" (ngSubmit)="onSubmit()">			
 			<div class="form-group col-5">
 				<label i18n>Full Name</label>
 				<input type="text" formControlName="fullName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" />
@@ -31,7 +31,11 @@
 					<div *ngIf="f.meetingEndTime.errors.required" i18n>Meeting End Time is required</div>
 				</div>
 			</div>
+
 			<div class="text-center col-5">
+				<p *ngIf="errorMessage.length > 0" style="color: #dc3545;" i18n>This meeting time is overlap with another meeting. Please change the time.</p>
+				<p *ngIf="errorMessage1.length > 0" style="color: #dc3545;" i18n>Start time and end time can not be the same.</p>
+				<p *ngIf="errorMessage2.length > 0" style="color: #dc3545;" i18n>End time can not be less than to the start time.</p>
 				<button class="btn btn-primary mr-1" i18n>Save</button>
 				<button class="btn btn-secondary" type="reset" (click)="onReset()" i18n>Reset</button>
 			</div>
